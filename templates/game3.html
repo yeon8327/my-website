@@ -60,6 +60,12 @@
     .reset-btn:hover {
       background: #B91C1C;
     }
+    .hint {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #FFD700; /* 금색 느낌 */
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -142,6 +148,14 @@
             <div>
               <h2>{winner} Winner!</h2>
               <p>{selected === winner ? 'Goal!' : 'Fail...'}</p>
+
+              {/* 플레이어가 이겼을 때만 힌트 표시 */}
+              {selected === winner && (
+                <div className="hint">
+                  Password Hint: 0
+                </div>
+              )}
+
               <button onClick={resetGame} className="reset-btn">다시 하기</button>
             </div>
           )}

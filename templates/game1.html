@@ -46,6 +46,11 @@
     .reset-btn:hover {
       background: #cc0000;
     }
+    .hint {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #00ff99;
+    }
   </style>
 </head>
 <body>
@@ -110,6 +115,14 @@
             ))}
           </div>
           <div className="status">{status}</div>
+
+          {/* 플레이어가 이겼을 때만 힌트 표시 */}
+          {winner === 'X' && (
+            <div className="hint">
+              Password Hint: 2
+            </div>
+          )}
+
           {isGameOver && (
             <button className="reset-btn" onClick={resetGame}>retry</button>
           )}

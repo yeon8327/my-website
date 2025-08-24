@@ -33,7 +33,7 @@
       margin-bottom: 1rem;
     }
     .success {
-      color: white; /* 변경됨 */
+      color: white;
       font-size: 1.5rem;
       font-weight: bold;
     }
@@ -53,6 +53,12 @@
     }
     .btn:hover {
       background-color: #B91C1C; /* 진한 빨강 */
+    }
+    .hint {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #FFD700; /* 금색 */
     }
   </style>
 </head>
@@ -121,7 +127,11 @@
           {gameOver && (
             <div>
               {won ? (
-                <p className="success">Success!</p>
+                <>
+                  <p className="success">Success!</p>
+                  {/* 플레이어가 이겼을 때만 힌트 표시 */}
+                  <div className="hint">Password Hint: 4</div>
+                </>
               ) : (
                 <p className="fail">Fail. The answer is "{TARGET_WORD.toUpperCase()}".</p>
               )}
