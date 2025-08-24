@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Enjoy your Daydream</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-     <style>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <style>
     body {
-        background-color: black;
-        color: white;
-        font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: rgb(144, 0, 0);
+      text-align: center;
+      padding: 2rem;
     }
-
-    a.red {
-        color: #ff0000; 
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
+    a {
+      display: block;
+      margin: 1rem 0;
+      color: #000000;
+      text-decoration: none;
+      font-size: 1.2rem;
     }
-
-    a.red:hover {
-        text-decoration: underline;
-        color: #660000; 
+    a:hover {
+      color: #484848;
     }
-
-    .menu {
-        text-align: center;
-        margin-top: 100px;
-    }
-</style>
+  </style>
 </head>
 <body>
-    <div class="menu">
-        <a href="/game1" class="red">play game1</a><br>
-        <a href="/game2" class="red">play game2</a><br>
-        <a href="/game3" class="red">play game3</a><br>
-        <a href="/game4" class="red">play game4</a>
-    </div>
+  <h1>게임 모음</h1>
+  <a href="game1.html">play game1</a>
+  <a href="game2.html">play game2</a>
+  <a href="game3.html">play game3</a>
+  <a href="game4.html">play game4</a>
 </body>
 </html>
